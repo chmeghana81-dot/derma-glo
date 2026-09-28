@@ -1,173 +1,383 @@
-/* ================= IMPROVED MOBILE VIEW ================= */
-
-@media (max-width: 650px) {
-
-  /* ---------- GENERAL ---------- */
-
-  html,
-  body {
-    width: 100%;
-    overflow-x: hidden;
-  }
-
-  .container {
-    width: 92%;
-    max-width: 100%;
-  }
-
-  .section {
-    padding: 65px 0;
-  }
+/* =========================================================
+   PROFESSIONAL MOBILE RESPONSIVE STYLING
+   DERMA-GLO CLINIC
+   ========================================================= */
 
 
-  /* ---------- NAVBAR ---------- */
+/* =========================================================
+   TABLET + MOBILE
+   ========================================================= */
+
+@media (max-width: 950px) {
+
+  /* ------------------------------
+     NAVIGATION
+  ------------------------------ */
 
   .nav-container {
-    height: 68px;
-    padding: 0 5px;
-  }
-
-  .logo {
-    gap: 8px;
-  }
-
-  .logo-icon {
-    width: 38px;
-    height: 38px;
-    font-size: 13px;
-  }
-
-  .logo span {
-    font-size: 14px;
-    letter-spacing: 1px;
-  }
-
-  .logo small {
-    font-size: 8px;
-  }
-
-  .menu-btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 42px;
-    height: 42px;
+    height: 72px;
+    padding: 0 4%;
   }
 
   .nav-links {
-    top: 68px;
+    position: absolute;
+    top: 72px;
+    left: 0;
     width: 100%;
-    padding: 20px;
+
+    padding: 18px 5%;
+
+    display: none;
+    flex-direction: column;
+    align-items: stretch;
+
     gap: 0;
+
+    background: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(18px);
+
+    border-top: 1px solid var(--border);
+    box-shadow: 0 15px 40px rgba(23, 51, 47, 0.12);
+  }
+
+  .nav-links.active {
+    display: flex;
   }
 
   .nav-links a {
     width: 100%;
-    padding: 13px 5px;
-    font-size: 15px;
-    border-bottom: 1px solid var(--border);
+    padding: 14px 4px;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    border-bottom: 1px solid rgba(223, 233, 229, 0.8);
+
+    transition: all 0.25s ease;
+  }
+
+  .nav-links a:hover {
+    padding-left: 8px;
+    color: var(--primary);
   }
 
   .nav-links a:last-child {
     border-bottom: none;
   }
 
+  .nav-call {
+    display: none;
+  }
+
   .mobile-call {
-    padding-top: 15px !important;
+    display: flex !important;
+    align-items: center;
+    gap: 8px;
+
+    color: var(--primary) !important;
+    font-weight: 700 !important;
+  }
+
+  .menu-btn {
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 10px;
+    border: 1px solid var(--border);
+    background: #ffffff;
+
+    transition: all 0.25s ease;
+  }
+
+  .menu-btn:hover {
+    background: var(--light);
+    border-color: var(--primary);
   }
 
 
-  /* ---------- HERO ---------- */
+  /* ------------------------------
+     GRIDS
+  ------------------------------ */
+
+  .about-grid,
+  .appointment-grid {
+    grid-template-columns: 1fr;
+    gap: 45px;
+  }
+
+  .treatments-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .why-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .reviews-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .contact-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+
+/* =========================================================
+   PROFESSIONAL MOBILE
+   ========================================================= */
+
+@media (max-width: 650px) {
+
+  /* ------------------------------
+     GLOBAL
+  ------------------------------ */
+
+  html {
+    scroll-padding-top: 70px;
+  }
+
+  body {
+    width: 100%;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .container {
+    width: 90%;
+    max-width: 100%;
+  }
+
+  .section {
+    padding: 72px 0;
+  }
+
+
+  /* ------------------------------
+     NAVBAR
+  ------------------------------ */
+
+  .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    height: 68px;
+
+    background: rgba(255, 255, 255, 0.96);
+    backdrop-filter: blur(18px);
+
+    box-shadow: 0 4px 25px rgba(23, 51, 47, 0.07);
+  }
+
+  .nav-container {
+    height: 68px;
+    padding: 0;
+  }
+
+  .logo {
+    gap: 9px;
+  }
+
+  .logo-icon {
+    width: 38px;
+    height: 38px;
+
+    font-size: 13px;
+
+    box-shadow: 0 5px 15px rgba(23, 107, 97, 0.15);
+  }
+
+  .logo span {
+    font-size: 14px;
+    letter-spacing: 1.2px;
+  }
+
+  .logo small {
+    font-size: 7.5px;
+    letter-spacing: 0.9px;
+  }
+
+  .menu-btn {
+    width: 40px;
+    height: 40px;
+
+    border-radius: 9px;
+  }
+
+  .nav-links {
+    top: 68px;
+
+    padding: 12px 5% 18px;
+
+    border-radius: 0 0 16px 16px;
+  }
+
+
+  /* ------------------------------
+     HERO
+  ------------------------------ */
 
   .hero {
-    min-height: 680px;
-    padding: 90px 0 50px;
-    background-position: 63% center;
+    min-height: 690px;
+
+    padding: 105px 0 55px;
+
+    background-position: 64% center;
+
+    display: flex;
+    align-items: center;
   }
 
   .hero-content {
-    width: 92%;
+    width: 90%;
   }
 
   .hero-text {
+    width: 100%;
     max-width: 100%;
   }
 
   .eyebrow {
     font-size: 10px;
-    letter-spacing: 2px;
-    margin-bottom: 14px;
+    letter-spacing: 2.4px;
+
+    margin-bottom: 15px;
   }
 
   .hero h1 {
-    font-size: clamp(38px, 11vw, 50px);
-    line-height: 1.08;
-    margin-bottom: 18px;
+    font-size: clamp(39px, 11vw, 52px);
+
+    line-height: 1.06;
+
+    margin-bottom: 20px;
+
+    letter-spacing: -0.5px;
   }
 
   .hero p {
     max-width: 100%;
+
     font-size: 15px;
-    line-height: 1.6;
-    margin-bottom: 25px;
+    line-height: 1.7;
+
+    margin-bottom: 27px;
   }
 
   .hero-buttons {
     width: 100%;
+
     display: flex;
     flex-direction: column;
-    align-items: stretch;
-    gap: 10px;
+
+    gap: 11px;
   }
 
   .btn {
     width: 100%;
-    min-height: 50px;
-    padding: 0 16px;
+
+    min-height: 51px;
+
+    padding: 0 18px;
+
+    border-radius: 28px;
+
+    font-size: 13px;
+  }
+
+  .btn-primary {
+    box-shadow: 0 8px 22px rgba(217, 185, 140, 0.22);
+  }
+
+  .btn-outline {
+    background: rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(5px);
   }
 
   .hero-info {
-    margin-top: 38px;
-    padding-top: 20px;
+    width: 100%;
+
+    margin-top: 42px;
+    padding-top: 21px;
+
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 18px 12px;
+
+    gap: 20px 14px;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.25);
+  }
+
+  .hero-info div {
+    min-width: 0;
   }
 
   .hero-info strong {
     font-size: 12px;
+    line-height: 1.4;
   }
 
   .hero-info span {
     font-size: 10px;
+    line-height: 1.5;
   }
 
 
-  /* ---------- SECTION HEADING ---------- */
+  /* ------------------------------
+     SECTION HEADINGS
+  ------------------------------ */
 
   .section-heading {
     width: 100%;
-    margin-bottom: 38px;
+
+    margin-bottom: 40px;
+  }
+
+  .section-tag {
+    font-size: 10px;
+    letter-spacing: 2.2px;
+
+    margin-bottom: 10px;
   }
 
   .section-heading h2,
   .about-content h2,
   .appointment-content h2 {
-    font-size: 34px;
-    line-height: 1.15;
+    font-size: clamp(30px, 8vw, 36px);
+
+    line-height: 1.14;
+
+    letter-spacing: -0.3px;
+
+    margin-bottom: 14px;
   }
 
   .section-heading p {
     font-size: 14px;
-    line-height: 1.6;
+    line-height: 1.7;
   }
 
 
-  /* ---------- ABOUT ---------- */
+  /* ------------------------------
+     ABOUT
+  ------------------------------ */
+
+  .about-section {
+    overflow: hidden;
+  }
 
   .about-grid {
     grid-template-columns: 1fr;
-    gap: 40px;
+
+    gap: 38px;
   }
 
   .about-image {
@@ -176,14 +386,27 @@
 
   .about-image img {
     width: 100%;
-    height: 400px;
+    height: 390px;
+
     object-fit: cover;
+
+    border-radius: 8px;
+
+    box-shadow: 0 15px 40px rgba(23, 51, 47, 0.12);
   }
 
   .experience-card {
-    right: 10px;
+    right: 12px;
     bottom: 15px;
-    padding: 14px 16px;
+
+    padding: 14px 17px;
+
+    border-radius: 8px;
+
+    box-shadow:
+      0 12px 30px rgba(22, 56, 50, 0.18);
+
+    backdrop-filter: blur(8px);
   }
 
   .experience-card strong {
@@ -196,198 +419,424 @@
 
   .about-content p {
     font-size: 14px;
-    line-height: 1.7;
+    line-height: 1.75;
+
+    margin-bottom: 15px;
   }
 
   .about-points {
     grid-template-columns: 1fr;
+
     gap: 12px;
-    margin: 22px 0;
+
+    margin: 24px 0;
   }
 
   .about-point {
+    padding: 11px 12px;
+
+    background: #ffffff;
+
+    border: 1px solid var(--border);
+    border-radius: 8px;
+
     font-size: 13px;
   }
 
 
-  /* ---------- TREATMENTS ---------- */
+  /* ------------------------------
+     TREATMENTS
+  ------------------------------ */
 
   .treatments-grid {
     grid-template-columns: 1fr;
+
     gap: 16px;
   }
 
   .treatment-card {
-    padding: 25px 22px;
+    padding: 26px 22px;
+
+    border-radius: 10px;
+
+    box-shadow: 0 8px 25px rgba(23, 51, 47, 0.04);
+
+    transition:
+      transform 0.25s ease,
+      box-shadow 0.25s ease,
+      border-color 0.25s ease;
+  }
+
+  .treatment-card:active {
+    transform: scale(0.99);
   }
 
   .treatment-icon {
-    width: 48px;
-    height: 48px;
-    margin-bottom: 15px;
+    width: 50px;
+    height: 50px;
+
+    margin-bottom: 17px;
   }
 
   .treatment-card h3 {
     font-size: 18px;
+
+    margin-bottom: 8px;
   }
 
   .treatment-card p {
     font-size: 13px;
-    line-height: 1.6;
+    line-height: 1.7;
+
+    margin-bottom: 16px;
   }
 
-
-  /* ---------- WHY CHOOSE US ---------- */
-
-  .why-grid {
-    grid-template-columns: 1fr;
-    gap: 15px;
-  }
-
-  .why-card {
-    padding: 25px 20px;
-  }
-
-  .why-icon {
-    width: 48px;
-    height: 48px;
-  }
-
-  .why-card h3 {
-    font-size: 17px;
-  }
-
-  .why-card p {
+  .treatment-card a {
     font-size: 13px;
   }
 
 
-  /* ---------- GALLERY ---------- */
+  /* ------------------------------
+     WHY CHOOSE US
+  ------------------------------ */
 
-  .gallery-grid {
+  .why-grid {
     grid-template-columns: 1fr;
-    gap: 14px;
-  }
 
-  .gallery-item {
-    height: 300px;
-    width: 100%;
-  }
-
-  .gallery-overlay {
-    padding: 35px 15px 15px;
-  }
-
-
-  /* ---------- REVIEWS ---------- */
-
-  .reviews-grid {
-    grid-template-columns: 1fr;
     gap: 15px;
   }
 
-  .review-card {
-    padding: 25px 22px;
+  .why-card {
+    padding: 27px 22px;
+
+    border-radius: 10px;
+
+    box-shadow: 0 8px 25px rgba(23, 51, 47, 0.05);
+
+    border: 1px solid rgba(223, 233, 229, 0.8);
   }
 
-  .review-card p {
+  .why-icon {
+    width: 50px;
+    height: 50px;
+
+    margin-bottom: 17px;
+  }
+
+  .why-card h3 {
+    font-size: 17px;
+    margin-bottom: 8px;
+  }
+
+  .why-card p {
     font-size: 13px;
     line-height: 1.7;
   }
 
 
-  /* ---------- APPOINTMENT ---------- */
+  /* ------------------------------
+     GALLERY
+  ------------------------------ */
+
+  .gallery-grid {
+    grid-template-columns: 1fr;
+
+    gap: 15px;
+  }
+
+  .gallery-item {
+    width: 100%;
+    height: 310px;
+
+    border-radius: 9px;
+
+    box-shadow: 0 10px 30px rgba(23, 51, 47, 0.08);
+  }
+
+  .gallery-item img {
+    height: 100%;
+
+    object-position: center;
+  }
+
+  .gallery-overlay {
+    padding: 45px 17px 17px;
+
+    background: linear-gradient(
+      transparent,
+      rgba(0, 0, 0, 0.78)
+    );
+  }
+
+  .gallery-overlay span {
+    font-size: 13px;
+  }
+
+
+  /* ------------------------------
+     REVIEWS
+  ------------------------------ */
+
+  .reviews-grid {
+    grid-template-columns: 1fr;
+
+    gap: 15px;
+  }
+
+  .review-card {
+    padding: 27px 22px;
+
+    border-radius: 10px;
+
+    box-shadow: 0 8px 25px rgba(23, 51, 47, 0.05);
+  }
+
+  .stars {
+    margin-bottom: 16px;
+  }
+
+  .review-card p {
+    font-size: 13px;
+    line-height: 1.75;
+
+    margin-bottom: 20px;
+  }
+
+  .review-card strong {
+    font-size: 13px;
+  }
+
+
+  /* ------------------------------
+     APPOINTMENT
+  ------------------------------ */
 
   .appointment-grid {
     grid-template-columns: 1fr;
+
     gap: 35px;
   }
 
   .appointment-content p {
     font-size: 14px;
-    line-height: 1.7;
+    line-height: 1.75;
+
+    margin-bottom: 24px;
+  }
+
+  .appointment-contact {
+    gap: 15px;
+  }
+
+  .appointment-contact > div,
+  .appointment-contact a {
+    padding: 10px 0;
   }
 
   .appointment-form {
-    padding: 22px 18px;
+    width: 100%;
+
+    padding: 25px 20px;
+
+    border-radius: 12px;
+
+    box-shadow:
+      0 15px 45px rgba(25, 72, 64, 0.10);
   }
 
   .form-group {
-    margin-bottom: 15px;
+    margin-bottom: 16px;
+  }
+
+  .form-group label {
+    font-size: 11px;
+    margin-bottom: 6px;
   }
 
   .form-group input,
   .form-group textarea,
   .form-group select {
-    padding: 12px;
+    width: 100%;
+
+    min-height: 46px;
+
+    padding: 12px 13px;
+
     font-size: 14px;
+
+    border-radius: 6px;
+
+    transition:
+      border-color 0.2s ease,
+      box-shadow 0.2s ease;
+  }
+
+  .form-group textarea {
+    min-height: 110px;
+    resize: vertical;
+  }
+
+  .form-group input:focus,
+  .form-group textarea:focus,
+  .form-group select:focus {
+    border-color: var(--primary);
+
+    box-shadow:
+      0 0 0 3px rgba(23, 107, 97, 0.08);
+  }
+
+  .form-btn {
+    min-height: 50px;
+    margin-top: 5px;
   }
 
 
-  /* ---------- CONTACT ---------- */
+  /* ------------------------------
+     CONTACT
+  ------------------------------ */
 
   .contact-grid {
     grid-template-columns: 1fr;
+
     gap: 15px;
+
+    margin-bottom: 25px;
   }
 
   .contact-card {
-    padding: 25px 20px;
+    padding: 25px 21px;
+
+    border-radius: 9px;
+
+    box-shadow: 0 7px 22px rgba(23, 51, 47, 0.04);
+  }
+
+  .contact-icon {
+    width: 48px;
+    height: 48px;
+
+    margin-bottom: 16px;
   }
 
   .contact-card h3 {
-    font-size: 18px;
+    font-size: 17px;
+    margin-bottom: 8px;
   }
 
   .contact-card p {
     font-size: 13px;
-    line-height: 1.6;
+    line-height: 1.7;
+
+    margin-bottom: 15px;
+  }
+
+  .contact-card a {
+    font-size: 13px;
   }
 
   .map-container {
-    height: 300px;
+    height: 290px;
+
+    border-radius: 9px;
+
+    box-shadow: 0 10px 30px rgba(23, 51, 47, 0.08);
   }
 
 
-  /* ---------- FOOTER ---------- */
+  /* ------------------------------
+     FOOTER
+  ------------------------------ */
 
   .footer-grid {
     grid-template-columns: 1fr;
-    gap: 30px;
-    padding: 50px 0;
+
+    gap: 35px;
+
+    padding: 55px 0;
   }
 
   .footer-brand p {
+    max-width: 100%;
+
     font-size: 13px;
-    line-height: 1.7;
+    line-height: 1.75;
   }
 
-  .footer-bottom .container {
-    padding: 15px 0;
-    flex-direction: column;
-    gap: 8px;
+  .footer h4 {
+    font-size: 15px;
+    margin-bottom: 14px;
+  }
+
+  .footer-links {
+    gap: 9px;
+    font-size: 13px;
+  }
+
+  .footer-contact {
+    gap: 10px;
+    font-size: 13px;
+  }
+
+  .footer-bottom {
     text-align: center;
   }
 
+  .footer-bottom .container {
+    padding: 17px 0;
 
-  /* ---------- WHATSAPP ---------- */
+    display: flex;
+    flex-direction: column;
+
+    gap: 7px;
+
+    font-size: 10px;
+  }
+
+
+  /* ------------------------------
+     WHATSAPP
+  ------------------------------ */
 
   .floating-whatsapp {
-    right: 14px;
-    bottom: 14px;
-    padding: 11px 15px;
+    right: 15px;
+    bottom: 15px;
+
+    padding: 12px 16px;
+
+    border-radius: 30px;
+
     font-size: 12px;
+
+    box-shadow:
+      0 8px 25px rgba(0, 0, 0, 0.18);
+
+    z-index: 9999;
   }
 }
 
 
-/* ================= SMALL PHONES ================= */
+/* =========================================================
+   SMALL MOBILE — 420px
+   ========================================================= */
 
 @media (max-width: 420px) {
+
+  /* ------------------------------
+     GENERAL
+  ------------------------------ */
 
   .container {
     width: 90%;
   }
+
+  .section {
+    padding: 58px 0;
+  }
+
+
+  /* ------------------------------
+     NAVBAR
+  ------------------------------ */
 
   .nav-container {
     height: 64px;
@@ -397,28 +846,65 @@
     top: 64px;
   }
 
+  .logo-icon {
+    width: 36px;
+    height: 36px;
+  }
+
+  .logo span {
+    font-size: 13px;
+  }
+
+  .logo small {
+    font-size: 7px;
+  }
+
+
+  /* ------------------------------
+     HERO
+  ------------------------------ */
+
   .hero {
     min-height: 650px;
-    padding-top: 85px;
-    background-position: 60% center;
+
+    padding: 92px 0 45px;
+
+    background-position: 61% center;
   }
 
   .hero h1 {
     font-size: 38px;
+
+    line-height: 1.08;
   }
 
   .hero p {
     font-size: 14px;
+    line-height: 1.65;
   }
 
   .hero-info {
     grid-template-columns: 1fr;
+
     gap: 12px;
+
+    margin-top: 32px;
   }
 
-  .section {
-    padding: 55px 0;
+  .hero-info div {
+    padding-bottom: 8px;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
   }
+
+  .hero-info div:last-child {
+    border-bottom: none;
+  }
+
+
+  /* ------------------------------
+     HEADINGS
+  ------------------------------ */
 
   .section-heading h2,
   .about-content h2,
@@ -426,29 +912,134 @@
     font-size: 30px;
   }
 
+  .section-heading p {
+    font-size: 13px;
+  }
+
+
+  /* ------------------------------
+     ABOUT
+  ------------------------------ */
+
   .about-image img {
     height: 350px;
+
+    border-radius: 8px;
   }
 
   .experience-card {
     position: relative;
+
     right: auto;
     bottom: auto;
-    margin-top: -25px;
-    margin-left: 15px;
+
     width: fit-content;
+
+    margin-top: -28px;
+    margin-left: 14px;
+
+    z-index: 2;
   }
 
-  .gallery-item {
-    height: 280px;
+
+  /* ------------------------------
+     CARDS
+  ------------------------------ */
+
+  .treatment-card,
+  .why-card,
+  .review-card,
+  .contact-card {
+    padding: 23px 19px;
   }
+
+
+  /* ------------------------------
+     GALLERY
+  ------------------------------ */
+
+  .gallery-item {
+    height: 275px;
+  }
+
+
+  /* ------------------------------
+     APPOINTMENT FORM
+  ------------------------------ */
+
+  .appointment-form {
+    padding: 21px 16px;
+
+    border-radius: 10px;
+  }
+
+
+  /* ------------------------------
+     MAP
+  ------------------------------ */
 
   .map-container {
     height: 250px;
   }
 
+
+  /* ------------------------------
+     WHATSAPP
+  ------------------------------ */
+
   .floating-whatsapp {
     right: 10px;
     bottom: 10px;
+
+    padding: 11px 14px;
+
+    font-size: 11px;
+  }
+}
+
+
+/* =========================================================
+   EXTRA SMALL DEVICES — 360px
+   ========================================================= */
+
+@media (max-width: 360px) {
+
+  .container {
+    width: 88%;
+  }
+
+  .hero {
+    min-height: 630px;
+  }
+
+  .hero h1 {
+    font-size: 34px;
+  }
+
+  .hero p {
+    font-size: 13px;
+  }
+
+  .hero-buttons .btn {
+    min-height: 47px;
+    font-size: 12px;
+  }
+
+  .section-heading h2,
+  .about-content h2,
+  .appointment-content h2 {
+    font-size: 27px;
+  }
+
+  .about-image img {
+    height: 310px;
+  }
+
+  .gallery-item {
+    height: 245px;
+  }
+
+  .appointment-form {
+    padding: 18px 14px;
   }
 }
