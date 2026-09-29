@@ -1,58 +1,105 @@
+import { NavLink } from "react-router-dom";
+import { Menu, X } from "lucide-react";
 import { useState } from "react";
-import { Menu, X, Phone } from "lucide-react";
+import "../styles/navbar.css"
 
 function Navbar() {
-  const [isOpen, setIsOpen] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
 
-  const navLinks = [
-    { name: "Home", href: "#home" },
-    { name: "About", href: "#about" },
-    { name: "Treatments", href: "#treatments" },
-    { name: "Why Us", href: "#why-us" },
-    { name: "Gallery", href: "#gallery" },
-    { name: "Contact", href: "#contact" },
-  ];
+  const closeMenu = () => {
+    setMenuOpen(false);
+    window.scrollTo(0, 0);
+  };
 
   return (
     <header className="navbar">
-      <div className="container nav-container">
-        <a href="#home" className="logo">
-          <div className="logo-icon">DG</div>
-          <div>
-            <span>DERMA GLO</span>
-            <small>Skin • Hair • Laser Clinic</small>
-          </div>
-        </a>
+      <div className="nav-container">
 
-        <nav className={`nav-links ${isOpen ? "active" : ""}`}>
-          {navLinks.map((link) => (
-            <a
-              key={link.name}
-              href={link.href}
-              onClick={() => setIsOpen(false)}
-            >
-              {link.name}
-            </a>
-          ))}
-
-          <a className="mobile-call" href="tel:08511722157">
-            <Phone size={17} />
-            Call Now
-          </a>
-        </nav>
-
-        <a className="nav-call" href="tel:08511722157">
-          <Phone size={17} />
-          <span>Call Now</span>
-        </a>
+        <NavLink to="/" className="logo" onClick={closeMenu}>
+          <span className="logo-main">DERMA GLO</span>
+          <span className="logo-sub">SKIN • HAIR • LASER</span>
+        </NavLink>
 
         <button
-          className="menu-btn"
-          onClick={() => setIsOpen(!isOpen)}
-          aria-label="Toggle navigation"
+          className="mobile-menu"
+          onClick={() => setMenuOpen(!menuOpen)}
+          aria-label="Toggle menu"
         >
-          {isOpen ? <X /> : <Menu />}
+          {menuOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
+
+        <nav className={`nav-links ${menuOpen ? "open" : ""}`}>
+
+          <NavLink
+            to="/"
+            end
+            className={({ isActive }) =>
+              isActive ? "nav-link active" : "nav-link"
+            }
+            onClick={closeMenu}
+          >
+            Home
+          </NavLink>
+
+          <NavLink
+            to="/about"
+            className={({ isActive }) =>
+              isActive ? "nav-link active" : "nav-link"
+            }
+            onClick={closeMenu}
+          >
+            About
+          </NavLink>
+
+          <NavLink
+            to="/treatments"
+            className={({ isActive }) =>
+              isActive ? "nav-link active" : "nav-link"
+            }
+            onClick={closeMenu}
+          >
+            Treatments
+          </NavLink>
+
+          <NavLink
+            to="/gallery"
+            className={({ isActive }) =>
+              isActive ? "nav-link active" : "nav-link"
+            }
+            onClick={closeMenu}
+          >
+            Gallery
+          </NavLink>
+
+          <NavLink
+            to="/reviews"
+            className={({ isActive }) =>
+              isActive ? "nav-link active" : "nav-link"
+            }
+            onClick={closeMenu}
+          >
+            Reviews
+          </NavLink>
+
+          <NavLink
+            to="/contact"
+            className={({ isActive }) =>
+              isActive ? "nav-link active" : "nav-link"
+            }
+            onClick={closeMenu}
+          >
+            Contact
+          </NavLink>
+
+          <NavLink
+            to="/appointment"
+            className="appointment-btn"
+            onClick={closeMenu}
+          >
+            Book Appointment
+          </NavLink>
+
+        </nav>
       </div>
     </header>
   );

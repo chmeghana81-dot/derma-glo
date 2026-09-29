@@ -1,41 +1,32 @@
+import { Routes, Route } from "react-router-dom";
+
 import Navbar from "./components/Navbar";
-import Hero from "./components/Hero";
-import About from "./components/About";
-import Treatments from "./components/Treatments";
-import WhyChooseUs from "./components/WhyChooseUs";
-import Gallery from "./components/Gallery";
-import Reviews from "./components/Reviews";
-import Appointment from "./components/Appointment";
-import Contact from "./components/Contact";
 import Footer from "./components/Footer";
+
+import Home from "./pages/Home";
+import AboutPage from "./pages/AboutPage";
+import TreatmentsPage from "./pages/TreatmentsPage";
+import GalleryPage from "./pages/GalleryPage";
+import ReviewsPage from "./pages/ReviewsPage";
+import AppointmentPage from "./pages/AppointmentPage";
+import ContactPage from "./pages/ContactPage";
 
 function App() {
   return (
     <>
       <Navbar />
 
-      <main>
-        <Hero />
-        <About />
-        <Treatments />
-        <WhyChooseUs />
-        <Gallery />
-        <Reviews />
-        <Appointment />
-        <Contact />
-      </main>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<AboutPage />} />
+        <Route path="/treatments" element={<TreatmentsPage />} />
+        <Route path="/gallery" element={<GalleryPage />} />
+        <Route path="/reviews" element={<ReviewsPage />} />
+        <Route path="/appointment" element={<AppointmentPage />} />
+        <Route path="/contact" element={<ContactPage />} />
+      </Routes>
 
       <Footer />
-
-      <a
-        href="https://wa.me/918511722157"
-        className="floating-whatsapp"
-        target="_blank"
-        rel="noreferrer"
-        aria-label="Chat on WhatsApp"
-      >
-        WhatsApp
-      </a>
     </>
   );
 }

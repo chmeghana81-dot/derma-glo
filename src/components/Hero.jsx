@@ -32,7 +32,7 @@ function Hero() {
           </p>
 
           <div className="hero-buttons">
-            <a href="#appointment" className="btn btn-primary">
+            <a href="/appointment" className="btn btn-primary">
               <CalendarDays size={19} />
               Book Appointment
               <ArrowRight size={17} />

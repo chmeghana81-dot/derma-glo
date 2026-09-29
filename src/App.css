@@ -1,0 +1,750 @@
+/* =========================================================
+   GLOBAL RESPONSIVE CSS
+   Mobile + Tablet + Laptop + Desktop
+========================================================= */
+
+/* ---------- GLOBAL RESET ---------- */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  width: 100%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+body {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+
+  overflow-x: hidden;
+
+  background: #f7faf9;
+  color: #344746;
+
+  font-family: "DM Sans", sans-serif;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+button,
+input,
+textarea,
+select {
+  max-width: 100%;
+  font-family: inherit;
+}
+
+a {
+  max-width: 100%;
+}
+
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+
+  margin: 0 auto;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+
+/* =========================================================
+   NAVBAR
+========================================================= */
+
+.navbar {
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  background: #ffffff;
+}
+
+.nav-container {
+  width: 100%;
+  max-width: 1200px;
+
+  min-height: 72px;
+
+  margin: 0 auto;
+  padding: 0 24px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+/* =========================================================
+   HERO / HOME
+========================================================= */
+
+.hero,
+.home,
+.hero-section {
+  width: 100%;
+  min-height: auto;
+  overflow: hidden;
+}
+
+.hero-container,
+.hero-content {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.hero img,
+.hero-image img,
+.home img {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+
+/* =========================================================
+   COMMON SECTIONS
+========================================================= */
+
+section {
+  width: 100%;
+}
+
+.section {
+  width: 100%;
+  padding: 90px 24px;
+}
+
+.section-title {
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+
+  text-align: center;
+}
+
+
+/* =========================================================
+   ABOUT
+========================================================= */
+
+.about-section {
+  width: 100%;
+  overflow: hidden;
+}
+
+.about-grid {
+  width: 100%;
+  max-width: 1200px;
+
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  gap: 60px;
+  align-items: center;
+}
+
+.about-grid img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+
+  object-fit: cover;
+}
+
+
+/* =========================================================
+   TREATMENTS
+========================================================= */
+
+.treatments-section {
+  width: 100%;
+  overflow: hidden;
+}
+
+.treatments-grid {
+  width: 100%;
+  max-width: 1200px;
+
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 25px;
+}
+
+.treatment-card {
+  width: 100%;
+  min-width: 0;
+
+  background: #ffffff;
+  border-radius: 14px;
+
+  overflow: hidden;
+}
+
+.treatment-card img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+
+/* =========================================================
+   GALLERY
+========================================================= */
+
+.gallery-section {
+  width: 100%;
+  overflow: hidden;
+}
+
+.gallery-grid {
+  width: 100%;
+  max-width: 1200px;
+
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 20px;
+}
+
+.gallery-grid img {
+  width: 100%;
+  height: 280px;
+
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+
+/* =========================================================
+   REVIEWS
+========================================================= */
+
+.reviews-section {
+  width: 100%;
+  overflow: hidden;
+}
+
+.reviews-grid {
+  width: 100%;
+  max-width: 1200px;
+
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 25px;
+}
+
+.review-card {
+  width: 100%;
+  min-width: 0;
+
+  background: #ffffff;
+  border-radius: 14px;
+
+  padding: 25px;
+}
+
+
+/* =========================================================
+   APPOINTMENT
+========================================================= */
+
+.appointment-section {
+  width: 100%;
+  overflow: hidden;
+}
+
+.appointment-container {
+  width: 100%;
+  max-width: 900px;
+
+  margin: 0 auto;
+}
+
+
+/* =========================================================
+   CONTACT
+========================================================= */
+
+.contact-section {
+  width: 100%;
+  overflow: hidden;
+}
+
+.contact-grid {
+  width: 100%;
+  max-width: 1200px;
+
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  gap: 40px;
+}
+
+
+/* =========================================================
+   FORMS
+========================================================= */
+
+input,
+textarea,
+select {
+  width: 100%;
+  max-width: 100%;
+
+  padding: 13px 15px;
+
+  border: 1px solid #dce7e4;
+  border-radius: 8px;
+
+  outline: none;
+}
+
+textarea {
+  min-height: 130px;
+  resize: vertical;
+}
+
+button {
+  max-width: 100%;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.footer {
+  width: 100%;
+  overflow: hidden;
+}
+
+.footer-container {
+  width: 100%;
+  max-width: 1200px;
+
+  margin: 0 auto;
+  padding: 50px 24px;
+}
+
+
+/* =========================================================
+   TABLET
+   769px - 1024px
+========================================================= */
+
+@media (max-width: 1024px) {
+
+  .container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .section {
+    padding: 75px 20px;
+  }
+
+  /* About */
+
+  .about-grid {
+    gap: 40px;
+  }
+
+  /* Treatments */
+
+  .treatments-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  /* Gallery */
+
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Reviews */
+
+  .reviews-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Contact */
+
+  .contact-grid {
+    gap: 30px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+   481px - 768px
+========================================================= */
+
+@media (max-width: 768px) {
+
+  /* ---------- GLOBAL ---------- */
+
+  .container {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  .section {
+    padding: 60px 18px;
+  }
+
+
+  /* ---------- NAVBAR ---------- */
+
+  .navbar {
+    min-height: 65px;
+  }
+
+  .nav-container {
+    min-height: 65px;
+    padding: 0 18px;
+  }
+
+
+  /* ---------- NAV LINKS ---------- */
+
+  .nav-links {
+    width: 100%;
+  }
+
+
+  /* ---------- HERO ---------- */
+
+  .hero,
+  .home,
+  .hero-section {
+    min-height: auto;
+  }
+
+  .hero-container,
+  .hero-content {
+    width: 100%;
+  }
+
+  .hero-grid {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .hero-content {
+    width: 100%;
+    text-align: center;
+  }
+
+  .hero-image {
+    width: 100%;
+    margin-top: 30px;
+  }
+
+  .hero-image img {
+    width: 100%;
+    height: auto;
+    max-height: 450px;
+    object-fit: cover;
+  }
+
+
+  /* ---------- ABOUT ---------- */
+
+  .about-grid {
+    grid-template-columns: 1fr;
+
+    gap: 35px;
+  }
+
+  .about-content {
+    width: 100%;
+  }
+
+  .about-image {
+    width: 100%;
+  }
+
+
+  /* ---------- TREATMENTS ---------- */
+
+  .treatments-grid {
+    grid-template-columns: 1fr;
+
+    gap: 18px;
+  }
+
+  .treatment-card {
+    width: 100%;
+  }
+
+
+  /* ---------- GALLERY ---------- */
+
+  .gallery-grid {
+    grid-template-columns: 1fr 1fr;
+
+    gap: 12px;
+  }
+
+  .gallery-grid img {
+    height: 220px;
+  }
+
+
+  /* ---------- REVIEWS ---------- */
+
+  .reviews-grid {
+    grid-template-columns: 1fr;
+
+    gap: 18px;
+  }
+
+
+  /* ---------- CONTACT ---------- */
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+
+    gap: 30px;
+  }
+
+
+  /* ---------- PAGE HEADER ---------- */
+
+  .page-header {
+    width: 100%;
+
+    padding: 60px 18px 45px;
+  }
+
+  .page-header h1 {
+    font-size: 38px;
+  }
+
+
+  /* ---------- BUTTONS ---------- */
+
+  .appointment-btn {
+    max-width: 100%;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   320px - 480px
+========================================================= */
+
+@media (max-width: 480px) {
+
+  .container {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .section {
+    padding: 50px 15px;
+  }
+
+
+  /* ---------- LOGO ---------- */
+
+  .logo-main {
+    font-size: 19px;
+  }
+
+  .logo-sub {
+    font-size: 6px;
+  }
+
+
+  /* ---------- HERO ---------- */
+
+  .hero h1,
+  .home h1 {
+    font-size: 32px;
+    line-height: 1.2;
+  }
+
+  .hero p,
+  .home p {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .hero-image {
+    margin-top: 25px;
+  }
+
+  .hero-image img {
+    max-height: 350px;
+  }
+
+
+  /* ---------- ABOUT ---------- */
+
+  .about-grid {
+    gap: 25px;
+  }
+
+  .about-grid h2 {
+    font-size: 30px;
+  }
+
+  .about-grid p {
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+
+  /* ---------- TREATMENTS ---------- */
+
+  .treatments-grid {
+    gap: 15px;
+  }
+
+  .treatment-card {
+    border-radius: 12px;
+  }
+
+
+  /* ---------- GALLERY ---------- */
+
+  .gallery-grid {
+    grid-template-columns: 1fr;
+
+    gap: 15px;
+  }
+
+  .gallery-grid img {
+    width: 100%;
+    height: 240px;
+  }
+
+
+  /* ---------- REVIEWS ---------- */
+
+  .review-card {
+    padding: 20px;
+  }
+
+
+  /* ---------- PAGE HEADER ---------- */
+
+  .page-header {
+    padding: 50px 15px 35px;
+  }
+
+  .page-header h1 {
+    font-size: 31px;
+    line-height: 1.2;
+  }
+
+  .page-header p {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+
+  /* ---------- FORM ---------- */
+
+  input,
+  textarea,
+  select {
+    font-size: 14px;
+  }
+
+
+  /* ---------- FOOTER ---------- */
+
+  .footer-container {
+    padding: 40px 15px;
+  }
+}
+
+
+/* =========================================================
+   VERY SMALL PHONES
+   320px and below
+========================================================= */
+
+@media (max-width: 360px) {
+
+  .nav-container {
+    padding: 0 12px;
+  }
+
+  .logo-main {
+    font-size: 17px;
+  }
+
+  .hero h1,
+  .home h1 {
+    font-size: 28px;
+  }
+
+  .page-header h1 {
+    font-size: 28px;
+  }
+
+  .section {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+}
+
+
+/* =========================================================
+   LARGE DESKTOP
+   1400px+
+========================================================= */
+
+@media (min-width: 1400px) {
+
+  .nav-container,
+  .container,
+  .hero-container,
+  .hero-content,
+  .about-grid,
+  .treatments-grid,
+  .gallery-grid,
+  .reviews-grid,
+  .contact-grid {
+    max-width: 1280px;
+  }
+
+  .section {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+}

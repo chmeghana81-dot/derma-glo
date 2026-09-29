@@ -1,0 +1,507 @@
+/* =========================================
+   ABOUT SECTION
+========================================= */
+
+.about-section {
+  position: relative;
+  padding: 100px 0;
+  background: #ffffff;
+  overflow: hidden;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 28px;
+}
+
+
+/* =========================================
+   ABOUT GRID
+========================================= */
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 80px;
+}
+
+
+/* =========================================
+   ABOUT IMAGE
+========================================= */
+
+.about-image {
+  position: relative;
+  width: 100%;
+  max-width: 520px;
+  margin: 0 auto;
+}
+
+.about-image::before {
+  content: "";
+
+  position: absolute;
+
+  top: -18px;
+  left: -18px;
+
+  width: 100%;
+  height: 100%;
+
+  border: 1px solid #d8c2b4;
+  border-radius: 24px;
+
+  z-index: 0;
+}
+
+.about-image img {
+  position: relative;
+  z-index: 1;
+
+  display: block;
+
+  width: 100%;
+  height: 520px;
+
+  object-fit: cover;
+
+  border-radius: 24px;
+
+  box-shadow: 0 20px 50px rgba(31, 77, 74, 0.14);
+}
+
+
+/* =========================================
+   EXPERIENCE CARD
+========================================= */
+
+.experience-card {
+  position: absolute;
+
+  right: -25px;
+  bottom: 35px;
+
+  z-index: 3;
+
+  display: flex;
+  align-items: center;
+  gap: 13px;
+
+  min-width: 190px;
+
+  padding: 16px 20px;
+
+  background: rgba(255, 255, 255, 0.96);
+
+  border: 1px solid #eeeeee;
+  border-radius: 14px;
+
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+
+  backdrop-filter: blur(10px);
+
+  color: #1f4d4a;
+}
+
+.experience-card svg {
+  flex-shrink: 0;
+  color: #b78b6e;
+}
+
+.experience-card div {
+  display: flex;
+  flex-direction: column;
+}
+
+.experience-card strong {
+  font-family: "Playfair Display", serif;
+
+  font-size: 17px;
+  font-weight: 700;
+
+  color: #1f4d4a;
+}
+
+.experience-card span {
+  margin-top: 4px;
+
+  font-family: "DM Sans", sans-serif;
+
+  font-size: 10px;
+  font-weight: 600;
+
+  letter-spacing: 1.4px;
+
+  color: #8c8c8c;
+}
+
+
+/* =========================================
+   ABOUT CONTENT
+========================================= */
+
+.about-content {
+  max-width: 560px;
+}
+
+.section-tag {
+  display: inline-block;
+
+  margin-bottom: 15px;
+
+  font-family: "DM Sans", sans-serif;
+
+  font-size: 11px;
+  font-weight: 700;
+
+  letter-spacing: 2.5px;
+
+  color: #b07f62;
+}
+
+
+/* =========================================
+   ABOUT HEADING
+========================================= */
+
+.about-content h2 {
+  margin: 0 0 22px;
+
+  font-family: "Playfair Display", serif;
+
+  font-size: clamp(38px, 4vw, 54px);
+
+  line-height: 1.15;
+
+  font-weight: 600;
+
+  color: #1d3331;
+}
+
+.about-content h2 span {
+  display: block;
+
+  color: #1f4d4a;
+}
+
+
+/* =========================================
+   ABOUT PARAGRAPHS
+========================================= */
+
+.about-content p {
+  margin: 0 0 17px;
+
+  font-family: "DM Sans", sans-serif;
+
+  font-size: 15px;
+
+  line-height: 1.8;
+
+  color: #6d7372;
+}
+
+
+/* =========================================
+   ABOUT POINTS
+========================================= */
+
+.about-points {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 14px 20px;
+
+  margin: 28px 0 32px;
+}
+
+.about-point {
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+
+  font-family: "DM Sans", sans-serif;
+
+  font-size: 13px;
+
+  font-weight: 600;
+
+  color: #3e4c4a;
+}
+
+.about-point svg {
+  flex-shrink: 0;
+
+  color: #1f4d4a;
+
+  stroke-width: 2;
+}
+
+
+/* =========================================
+   CONSULTATION BUTTON
+========================================= */
+
+.text-btn {
+  position: relative;
+
+  display: inline-flex;
+  align-items: center;
+
+  padding-bottom: 6px;
+
+  text-decoration: none;
+
+  font-family: "DM Sans", sans-serif;
+
+  font-size: 14px;
+
+  font-weight: 700;
+
+  color: #1f4d4a;
+
+  transition: color 0.3s ease;
+}
+
+.text-btn::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  bottom: 0;
+
+  width: 100%;
+  height: 2px;
+
+  background: #b78b6e;
+
+  transform: scaleX(1);
+  transform-origin: left;
+
+  transition: transform 0.3s ease;
+}
+
+.text-btn:hover {
+  color: #b07f62;
+}
+
+.text-btn:hover::after {
+  transform: scaleX(0.65);
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1000px) {
+
+  .about-section {
+    padding: 80px 0;
+  }
+
+  .about-grid {
+    gap: 55px;
+  }
+
+  .about-image img {
+    height: 450px;
+  }
+
+  .experience-card {
+    right: -15px;
+    bottom: 25px;
+  }
+
+  .about-content h2 {
+    font-size: 42px;
+  }
+
+  .about-content p {
+    font-size: 14px;
+  }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 768px) {
+
+  .about-section {
+    padding: 70px 0;
+  }
+
+  .container {
+    padding: 0 20px;
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr;
+
+    gap: 55px;
+  }
+
+
+  /* Image */
+
+  .about-image {
+    max-width: 100%;
+  }
+
+  .about-image::before {
+    top: -12px;
+    left: -12px;
+
+    border-radius: 18px;
+  }
+
+  .about-image img {
+    height: 420px;
+
+    border-radius: 18px;
+  }
+
+
+  /* Experience Card */
+
+  .experience-card {
+    right: 15px;
+    bottom: -20px;
+
+    min-width: auto;
+
+    padding: 13px 16px;
+  }
+
+  .experience-card strong {
+    font-size: 15px;
+  }
+
+  .experience-card span {
+    font-size: 9px;
+  }
+
+
+  /* Content */
+
+  .about-content {
+    max-width: 100%;
+  }
+
+  .section-tag {
+    font-size: 10px;
+    letter-spacing: 2px;
+  }
+
+  .about-content h2 {
+    font-size: 38px;
+
+    line-height: 1.2;
+
+    margin-bottom: 20px;
+  }
+
+  .about-content p {
+    font-size: 14px;
+
+    line-height: 1.75;
+  }
+
+
+  /* Points */
+
+  .about-points {
+    grid-template-columns: 1fr;
+
+    gap: 12px;
+
+    margin: 25px 0 30px;
+  }
+
+  .about-point {
+    font-size: 13px;
+  }
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 480px) {
+
+  .about-section {
+    padding: 60px 0;
+  }
+
+  .container {
+    padding: 0 16px;
+  }
+
+  .about-grid {
+    gap: 45px;
+  }
+
+  .about-image img {
+    height: 350px;
+
+    border-radius: 16px;
+  }
+
+  .about-image::before {
+    top: -8px;
+    left: -8px;
+
+    border-radius: 16px;
+  }
+
+  .experience-card {
+    right: 8px;
+    bottom: -18px;
+
+    padding: 11px 13px;
+
+    gap: 9px;
+  }
+
+  .experience-card svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .experience-card strong {
+    font-size: 14px;
+  }
+
+  .experience-card span {
+    font-size: 8px;
+
+    letter-spacing: 1px;
+  }
+
+  .about-content h2 {
+    font-size: 32px;
+  }
+
+  .about-content p {
+    font-size: 13.5px;
+
+    line-height: 1.7;
+  }
+
+  .about-point {
+    font-size: 12.5px;
+  }
+
+  .text-btn {
+    font-size: 13px;
+  }
+}

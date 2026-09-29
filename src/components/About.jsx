@@ -1,4 +1,5 @@
 import { CheckCircle2, Sparkles } from "lucide-react";
+// import "../styles/about.css"
 
 function About() {
   const points = [

@@ -1,0 +1,400 @@
+/* =========================================
+   NAVBAR - PROFESSIONAL CLINIC
+========================================= */
+
+.navbar {
+  position: sticky;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 72px;
+
+  z-index: 1000;
+
+  background: #ffffff;
+  border-bottom: 1px solid #eeeeee;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================
+   NAV CONTAINER
+========================================= */
+
+.nav-container {
+  width: 100%;
+  max-width: 1200px;
+
+  height: 72px;
+
+  margin: 0 auto;
+  padding: 0 24px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================
+   LOGO
+========================================= */
+
+.logo {
+  display: flex;
+  flex-direction: column;
+
+  text-decoration: none;
+
+  flex-shrink: 0;
+}
+
+.logo-main {
+  margin: 0;
+
+  font-family: "Playfair Display", serif;
+
+  font-size: 24px;
+  line-height: 1.1;
+  font-weight: 700;
+
+  color: #1f4d4a;
+}
+
+.logo-sub {
+  margin: 4px 0 0;
+
+  font-family: "DM Sans", sans-serif;
+
+  font-size: 8px;
+  line-height: 1;
+
+  font-weight: 600;
+  letter-spacing: 2px;
+
+  color: #9a7560;
+}
+
+
+/* =========================================
+   NAVIGATION LINKS
+========================================= */
+
+.nav-links {
+  display: flex;
+  align-items: center;
+
+  gap: 26px;
+
+  margin-left: auto;
+  margin-right: 25px;
+}
+
+.nav-link {
+  position: relative;
+
+  display: inline-flex;
+  align-items: center;
+
+  height: 72px;
+
+  padding: 0;
+
+  text-decoration: none;
+
+  font-family: "DM Sans", sans-serif;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  color: #333333;
+
+  white-space: nowrap;
+
+  transition: color 0.25s ease;
+}
+
+.nav-link:hover {
+  color: #1f4d4a;
+}
+
+.nav-link.active {
+  color: #1f4d4a;
+}
+
+
+/* Active underline */
+
+.nav-link::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  bottom: 20px;
+
+  width: 0;
+  height: 2px;
+
+  background: #1f4d4a;
+
+  transition: width 0.25s ease;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 100%;
+}
+
+
+/* =========================================
+   BOOK APPOINTMENT
+========================================= */
+
+.appointment-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-width: 145px;
+  height: 42px;
+
+  padding: 0 20px;
+
+  border-radius: 24px;
+
+  background: #b8895b;
+  color: #ffffff;
+
+  text-decoration: none;
+
+  font-family: "DM Sans", sans-serif;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  white-space: nowrap;
+
+  box-sizing: border-box;
+
+  transition:
+    background 0.25s ease,
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.appointment-btn:hover {
+  background: #966b43;
+
+  transform: translateY(-1px);
+
+  box-shadow: 0 6px 18px rgba(150, 107, 67, 0.22);
+}
+
+
+/* =========================================
+   MOBILE MENU BUTTON
+========================================= */
+
+.mobile-menu {
+  display: none;
+
+  width: 42px;
+  height: 42px;
+
+  padding: 0;
+
+  border: none;
+  border-radius: 8px;
+
+  background: transparent;
+
+  color: #1f4d4a;
+
+  cursor: pointer;
+
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+}
+
+.mobile-menu:hover {
+  background: #f3f8f7;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1000px) {
+
+  .nav-container {
+    padding: 0 18px;
+  }
+
+  .nav-links {
+    gap: 18px;
+    margin-right: 18px;
+  }
+
+  .nav-link {
+    font-size: 13px;
+  }
+
+  .appointment-btn {
+    min-width: 125px;
+    padding: 0 15px;
+    font-size: 12px;
+  }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 768px) {
+
+  .navbar {
+    height: 65px;
+  }
+
+  .nav-container {
+    height: 65px;
+
+    padding: 0 18px;
+  }
+
+
+  /* Logo */
+
+  .logo-main {
+    font-size: 21px;
+  }
+
+  .logo-sub {
+    font-size: 7px;
+    letter-spacing: 1.8px;
+  }
+
+
+  /* Hamburger */
+
+  .mobile-menu {
+    display: flex;
+  }
+
+
+  /* Mobile navigation */
+
+  .nav-links {
+    position: absolute;
+
+    top: 65px;
+    left: 0;
+
+    width: 100%;
+
+    margin: 0;
+    padding: 12px 18px 18px;
+
+    display: none;
+
+    flex-direction: column;
+    align-items: stretch;
+
+    gap: 3px;
+
+    background: #ffffff;
+
+    border-bottom: 1px solid #eeeeee;
+
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+
+    box-sizing: border-box;
+  }
+
+
+  /* Open menu */
+
+  .nav-links.open {
+    display: flex;
+  }
+
+
+  /* Mobile links */
+
+  .nav-link {
+    width: 100%;
+
+    height: auto;
+
+    min-height: 45px;
+
+    padding: 12px 10px;
+
+    box-sizing: border-box;
+
+    border-radius: 7px;
+
+    font-size: 14px;
+  }
+
+  .nav-link::after {
+    display: none;
+  }
+
+  .nav-link:hover,
+  .nav-link.active {
+    background: #f3f8f7;
+
+    color: #1f4d4a;
+  }
+
+
+  /* Appointment */
+
+  .appointment-btn {
+    width: 100%;
+
+    height: 45px;
+
+    margin-top: 8px;
+
+    min-width: 0;
+
+    border-radius: 24px;
+  }
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 480px) {
+
+  .nav-container {
+    padding: 0 15px;
+  }
+
+  .logo-main {
+    font-size: 19px;
+  }
+
+  .logo-sub {
+    font-size: 6px;
+    letter-spacing: 1.5px;
+  }
+
+  .mobile-menu {
+    width: 40px;
+    height: 40px;
+  }
+}
