@@ -1,750 +1,1209 @@
 /* =========================================================
-   GLOBAL RESPONSIVE CSS
-   Mobile + Tablet + Laptop + Desktop
+   DERMA GLO
+   HERO SECTION
+   FULL RESPONSIVE VERSION
 ========================================================= */
 
-/* ---------- GLOBAL RESET ---------- */
 
-* {
+/* =========================================================
+   DESKTOP HERO
+========================================================= */
+
+.hero {
+  position: relative;
+
+  width: 100%;
+
+  min-height: calc(100vh - 76px);
+
+  background-size: cover;
+
+  background-position: center center;
+
+  background-repeat: no-repeat;
+
+  display: flex;
+
+  align-items: center;
+
+  overflow: hidden;
+}
+
+
+/* =========================================================
+   HERO OVERLAY
+========================================================= */
+
+.hero-overlay {
+  position: absolute;
+
+  inset: 0;
+
+  z-index: 1;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(20, 55, 52, 0.62) 0%,
+      rgba(20, 55, 52, 0.38) 35%,
+      rgba(20, 55, 52, 0.10) 70%,
+      rgba(20, 55, 52, 0.02) 100%
+    );
+}
+
+
+/* =========================================================
+   HERO CONTENT
+========================================================= */
+
+.hero-content {
+  position: relative;
+
+  z-index: 2;
+
+  width: 100%;
+
+  max-width: 1280px;
+
+  margin: 0 auto;
+
+  padding: 70px 32px;
+
   box-sizing: border-box;
 }
 
-html {
+
+/* =========================================================
+   HERO TEXT
+========================================================= */
+
+.hero-text {
   width: 100%;
-  overflow-x: hidden;
-  scroll-behavior: smooth;
+
+  max-width: 650px;
+
+  color: #ffffff;
 }
 
-body {
-  width: 100%;
-  margin: 0;
-  padding: 0;
 
-  overflow-x: hidden;
+/* =========================================================
+   EYEBROW
+========================================================= */
 
-  background: #f7faf9;
-  color: #344746;
-
-  font-family: "DM Sans", sans-serif;
-}
-
-img {
-  max-width: 100%;
-  height: auto;
+.eyebrow {
   display: block;
-}
 
-button,
-input,
-textarea,
-select {
-  max-width: 100%;
-  font-family: inherit;
-}
+  margin-bottom: 24px;
 
-a {
-  max-width: 100%;
-}
+  font-family:
+    "DM Sans",
+    Arial,
+    sans-serif;
 
+  font-size: 11px;
 
-/* =========================================================
-   CONTAINER
-========================================================= */
+  font-weight: 700;
 
-.container {
-  width: 100%;
-  max-width: 1200px;
+  line-height: 1.4;
 
-  margin: 0 auto;
-  padding-left: 24px;
-  padding-right: 24px;
+  letter-spacing: 3px;
+
+  color: #ffffff;
 }
 
 
 /* =========================================================
-   NAVBAR
+   MAIN HEADING
 ========================================================= */
 
-.navbar {
-  width: 100%;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
+.hero h1 {
+  margin: 0;
 
-  background: #ffffff;
+  font-family:
+    "Playfair Display",
+    Georgia,
+    serif;
+
+  font-size: clamp(58px, 5.2vw, 82px);
+
+  line-height: 0.98;
+
+  font-weight: 600;
+
+  letter-spacing: -2px;
+
+  color: #ffffff;
 }
 
-.nav-container {
-  width: 100%;
-  max-width: 1200px;
 
-  min-height: 72px;
+/* Gold heading */
 
-  margin: 0 auto;
-  padding: 0 24px;
+.hero h1 span {
+  color: #d9b98c;
+}
 
+
+/* =========================================================
+   DESCRIPTION
+========================================================= */
+
+.hero p {
+  max-width: 570px;
+
+  margin: 28px 0 0;
+
+  font-family:
+    "DM Sans",
+    Arial,
+    sans-serif;
+
+  font-size: 17px;
+
+  line-height: 1.7;
+
+  color: #ffffff;
+}
+
+
+/* =========================================================
+   BUTTON CONTAINER
+========================================================= */
+
+.hero-buttons {
   display: flex;
+
   align-items: center;
-  justify-content: space-between;
+
+  gap: 12px;
+
+  margin-top: 32px;
 }
 
 
 /* =========================================================
-   HERO / HOME
+   COMMON BUTTON
 ========================================================= */
 
-.hero,
-.home,
-.hero-section {
-  width: 100%;
-  min-height: auto;
-  overflow: hidden;
-}
+.hero .btn {
+  display: inline-flex;
 
-.hero-container,
-.hero-content {
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.hero img,
-.hero-image img,
-.home img {
-  max-width: 100%;
-  height: auto;
-  object-fit: cover;
-}
-
-
-/* =========================================================
-   COMMON SECTIONS
-========================================================= */
-
-section {
-  width: 100%;
-}
-
-.section {
-  width: 100%;
-  padding: 90px 24px;
-}
-
-.section-title {
-  max-width: 800px;
-  margin-left: auto;
-  margin-right: auto;
-
-  text-align: center;
-}
-
-
-/* =========================================================
-   ABOUT
-========================================================= */
-
-.about-section {
-  width: 100%;
-  overflow: hidden;
-}
-
-.about-grid {
-  width: 100%;
-  max-width: 1200px;
-
-  margin: 0 auto;
-
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-
-  gap: 60px;
   align-items: center;
-}
 
-.about-grid img {
-  width: 100%;
-  max-width: 100%;
-  height: auto;
+  justify-content: center;
 
-  object-fit: cover;
+  gap: 10px;
+
+  min-height: 50px;
+
+  padding: 0 20px;
+
+  border-radius: 28px;
+
+  box-sizing: border-box;
+
+  text-decoration: none;
+
+  font-family:
+    "DM Sans",
+    Arial,
+    sans-serif;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  white-space: nowrap;
+
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease,
+    box-shadow 0.25s ease;
 }
 
 
 /* =========================================================
-   TREATMENTS
+   PRIMARY BUTTON
 ========================================================= */
 
-.treatments-section {
-  width: 100%;
-  overflow: hidden;
+.hero .btn-primary {
+  background: #d9b98c;
+
+  color: #102f2c;
+
+  border: 1px solid #d9b98c;
 }
 
-.treatments-grid {
-  width: 100%;
-  max-width: 1200px;
 
-  margin: 0 auto;
+.hero .btn-primary:hover {
+  background: #e5c9a1;
 
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 8px 20px
+    rgba(0, 0, 0, 0.15);
+}
+
+
+/* =========================================================
+   PHONE BUTTON
+========================================================= */
+
+.hero .btn-outline {
+  background:
+    rgba(255, 255, 255, 0.05);
+
+  color: #ffffff;
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.55);
+
+  backdrop-filter: blur(5px);
+}
+
+
+.hero .btn-outline:hover {
+  background:
+    rgba(255, 255, 255, 0.12);
+
+  transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   HERO INFORMATION
+========================================================= */
+
+.hero-info {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
 
-  gap: 25px;
-}
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
 
-.treatment-card {
-  width: 100%;
-  min-width: 0;
+  max-width: 650px;
 
-  background: #ffffff;
-  border-radius: 14px;
+  margin-top: 58px;
 
-  overflow: hidden;
-}
+  padding-top: 22px;
 
-.treatment-card img {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
+  border-top:
+    1px solid
+    rgba(255, 255, 255, 0.28);
 }
 
 
-/* =========================================================
-   GALLERY
-========================================================= */
+/* Individual information */
 
-.gallery-section {
-  width: 100%;
-  overflow: hidden;
-}
+.hero-info > div {
+  display: flex;
 
-.gallery-grid {
-  width: 100%;
-  max-width: 1200px;
+  flex-direction: column;
 
-  margin: 0 auto;
+  gap: 5px;
 
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-
-  gap: 20px;
-}
-
-.gallery-grid img {
-  width: 100%;
-  height: 280px;
-
-  object-fit: cover;
-  border-radius: 12px;
+  padding-right: 20px;
 }
 
 
-/* =========================================================
-   REVIEWS
-========================================================= */
+/* Title */
 
-.reviews-section {
-  width: 100%;
-  overflow: hidden;
+.hero-info strong {
+  font-family:
+    "DM Sans",
+    Arial,
+    sans-serif;
+
+  font-size: 14px;
+
+  line-height: 1.3;
+
+  font-weight: 700;
+
+  color: #ffffff;
 }
 
-.reviews-grid {
-  width: 100%;
-  max-width: 1200px;
 
-  margin: 0 auto;
+/* Subtitle */
 
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+.hero-info span {
+  font-family:
+    "DM Sans",
+    Arial,
+    sans-serif;
 
-  gap: 25px;
-}
+  font-size: 12px;
 
-.review-card {
-  width: 100%;
-  min-width: 0;
+  line-height: 1.4;
 
-  background: #ffffff;
-  border-radius: 14px;
-
-  padding: 25px;
+  color:
+    rgba(255, 255, 255, 0.75);
 }
 
 
 /* =========================================================
-   APPOINTMENT
+   LARGE DESKTOP
+   1440px+
 ========================================================= */
 
-.appointment-section {
-  width: 100%;
-  overflow: hidden;
-}
+@media (min-width: 1440px) {
 
-.appointment-container {
-  width: 100%;
-  max-width: 900px;
+  .hero {
+    min-height:
+      calc(100vh - 76px);
 
-  margin: 0 auto;
+    background-position:
+      center center;
+  }
+
+
+  .hero-content {
+    max-width: 1400px;
+
+    padding:
+      80px 50px;
+  }
+
+
+  .hero-text {
+    max-width: 680px;
+  }
+
+
+  .hero h1 {
+    font-size: 82px;
+  }
+
+
+  .hero p {
+    max-width: 600px;
+
+    font-size: 18px;
+  }
+
+
+  .hero-info {
+    max-width: 680px;
+  }
 }
 
 
 /* =========================================================
-   CONTACT
+   DESKTOP
+   1200px — 1439px
 ========================================================= */
 
-.contact-section {
-  width: 100%;
-  overflow: hidden;
-}
+@media (min-width: 1200px)
+and (max-width: 1439px) {
 
-.contact-grid {
-  width: 100%;
-  max-width: 1200px;
+  .hero {
+    min-height:
+      calc(100vh - 76px);
 
-  margin: 0 auto;
+    background-position:
+      center center;
+  }
 
-  display: grid;
-  grid-template-columns: 1fr 1fr;
 
-  gap: 40px;
+  .hero-content {
+    max-width: 1280px;
+
+    padding:
+      70px 32px;
+  }
+
+
+  .hero h1 {
+    font-size: 76px;
+  }
 }
 
 
 /* =========================================================
-   FORMS
+   LAPTOP
+   1024px — 1199px
 ========================================================= */
 
-input,
-textarea,
-select {
-  width: 100%;
-  max-width: 100%;
+@media (min-width: 1024px)
+and (max-width: 1199px) {
 
-  padding: 13px 15px;
+  .hero {
+    min-height:
+      calc(100vh - 72px);
 
-  border: 1px solid #dce7e4;
-  border-radius: 8px;
+    background-position:
+      center center;
+  }
 
-  outline: none;
-}
 
-textarea {
-  min-height: 130px;
-  resize: vertical;
-}
+  .hero-content {
+    max-width: 1100px;
 
-button {
-  max-width: 100%;
+    padding:
+      60px 28px;
+  }
+
+
+  .hero-text {
+    max-width: 570px;
+  }
+
+
+  .hero h1 {
+    font-size: 64px;
+
+    letter-spacing: -1.5px;
+  }
+
+
+  .hero p {
+    font-size: 16px;
+
+    max-width: 520px;
+  }
+
+
+  .hero-info {
+    max-width: 570px;
+
+    margin-top: 45px;
+  }
 }
 
 
 /* =========================================================
-   FOOTER
+   SMALL LAPTOP / TABLET LANDSCAPE
+   900px — 1023px
 ========================================================= */
 
-.footer {
-  width: 100%;
-  overflow: hidden;
-}
+@media (min-width: 900px)
+and (max-width: 1023px) {
 
-.footer-container {
-  width: 100%;
-  max-width: 1200px;
+  .hero {
+    min-height:
+      calc(100vh - 68px);
 
-  margin: 0 auto;
-  padding: 50px 24px;
+    background-position:
+      65% center;
+  }
+
+
+  .hero-overlay {
+    background:
+      linear-gradient(
+        90deg,
+        rgba(20, 55, 52, 0.68) 0%,
+        rgba(20, 55, 52, 0.42) 50%,
+        rgba(20, 55, 52, 0.12) 100%
+      );
+  }
+
+
+  .hero-content {
+    padding:
+      55px 26px;
+  }
+
+
+  .hero-text {
+    max-width: 550px;
+  }
+
+
+  .eyebrow {
+    font-size: 10px;
+
+    letter-spacing: 2.5px;
+  }
+
+
+  .hero h1 {
+    font-size: 58px;
+  }
+
+
+  .hero p {
+    font-size: 16px;
+
+    max-width: 500px;
+  }
+
+
+  .hero-buttons {
+    margin-top: 28px;
+  }
+
+
+  .hero-info {
+    max-width: 550px;
+
+    margin-top: 42px;
+  }
 }
 
 
 /* =========================================================
    TABLET
-   769px - 1024px
+   768px — 899px
 ========================================================= */
 
-@media (max-width: 1024px) {
+@media (min-width: 768px)
+and (max-width: 899px) {
 
-  .container {
-    padding-left: 20px;
-    padding-right: 20px;
+  .hero {
+    min-height:
+      calc(100vh - 65px);
+
+    background-position:
+      68% center;
   }
 
-  .section {
-    padding: 75px 20px;
+
+  .hero-overlay {
+    background:
+      linear-gradient(
+        90deg,
+        rgba(20, 55, 52, 0.68) 0%,
+        rgba(20, 55, 52, 0.42) 50%,
+        rgba(20, 55, 52, 0.12) 100%
+      );
   }
 
-  /* About */
 
-  .about-grid {
-    gap: 40px;
+  .hero-content {
+    padding:
+      55px 24px;
   }
 
-  /* Treatments */
 
-  .treatments-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
+  .hero-text {
+    max-width: 520px;
   }
 
-  /* Gallery */
 
-  .gallery-grid {
-    grid-template-columns: repeat(2, 1fr);
+  .eyebrow {
+    font-size: 10px;
+
+    letter-spacing: 2.5px;
   }
 
-  /* Reviews */
 
-  .reviews-grid {
-    grid-template-columns: repeat(2, 1fr);
+  .hero h1 {
+    font-size: 54px;
+
+    line-height: 1;
   }
 
-  /* Contact */
 
-  .contact-grid {
-    gap: 30px;
+  .hero p {
+    font-size: 15px;
+
+    max-width: 470px;
+  }
+
+
+  .hero-buttons {
+    margin-top: 26px;
+  }
+
+
+  .hero-info {
+    max-width: 520px;
+
+    margin-top: 40px;
+  }
+
+
+  .hero-info strong {
+    font-size: 13px;
+  }
+
+
+  .hero-info span {
+    font-size: 11px;
+  }
+}
+
+
+/* =========================================================
+   LARGE MOBILE / SMALL TABLET
+   600px — 767px
+========================================================= */
+
+@media (min-width: 600px)
+and (max-width: 767px) {
+
+  .hero {
+
+    /*
+      IMPORTANT:
+      Use contain so the complete picture
+      remains visible.
+    */
+
+    min-height:
+      calc(100svh - 64px);
+
+    height:
+      calc(100svh - 64px);
+
+    background-size: contain;
+
+    background-position:
+      center top;
+
+    background-repeat: no-repeat;
+
+    background-color:
+      #78958f;
+
+    align-items: flex-end;
+  }
+
+
+  .hero-overlay {
+    background:
+      linear-gradient(
+        180deg,
+        rgba(20, 55, 52, 0.05) 0%,
+        rgba(20, 55, 52, 0.15) 35%,
+        rgba(20, 55, 52, 0.45) 65%,
+        rgba(15, 42, 40, 0.80) 100%
+      );
+  }
+
+
+  .hero-content {
+    height: 100%;
+
+    padding:
+      0 28px 28px;
+
+    display: flex;
+
+    align-items: flex-end;
+  }
+
+
+  .hero-text {
+    max-width: 600px;
+  }
+
+
+  .eyebrow {
+    margin-bottom: 18px;
+
+    font-size: 10px;
+
+    letter-spacing: 2.5px;
+  }
+
+
+  .hero h1 {
+    font-size:
+      clamp(50px, 9vw, 64px);
+
+    line-height: 0.96;
+  }
+
+
+  .hero p {
+    max-width: 540px;
+
+    margin-top: 20px;
+
+    font-size: 15px;
+
+    line-height: 1.6;
+  }
+
+
+  .hero-buttons {
+    margin-top: 22px;
+  }
+
+
+  .hero .btn {
+    min-height: 48px;
+
+    font-size: 13px;
+  }
+
+
+  .hero-info {
+    max-width: 600px;
+
+    margin-top: 30px;
+
+    padding-top: 16px;
+  }
+
+
+  .hero-info strong {
+    font-size: 12px;
+  }
+
+
+  .hero-info span {
+    font-size: 10px;
   }
 }
 
 
 /* =========================================================
    MOBILE
-   481px - 768px
+   480px — 599px
 ========================================================= */
 
-@media (max-width: 768px) {
+@media (min-width: 480px)
+and (max-width: 599px) {
 
-  /* ---------- GLOBAL ---------- */
+  .hero {
 
-  .container {
-    padding-left: 18px;
-    padding-right: 18px;
-  }
+    /*
+      FULL IMAGE VISIBLE
+    */
 
-  .section {
-    padding: 60px 18px;
-  }
+    min-height:
+      calc(100svh - 64px);
 
+    height:
+      calc(100svh - 64px);
 
-  /* ---------- NAVBAR ---------- */
+    background-size: contain;
 
-  .navbar {
-    min-height: 65px;
-  }
+    background-position:
+      center top;
 
-  .nav-container {
-    min-height: 65px;
-    padding: 0 18px;
-  }
+    background-repeat: no-repeat;
 
+    background-color:
+      #78958f;
 
-  /* ---------- NAV LINKS ---------- */
-
-  .nav-links {
-    width: 100%;
+    align-items: flex-end;
   }
 
 
-  /* ---------- HERO ---------- */
-
-  .hero,
-  .home,
-  .hero-section {
-    min-height: auto;
+  .hero-overlay {
+    background:
+      linear-gradient(
+        180deg,
+        rgba(20, 55, 52, 0.04) 0%,
+        rgba(20, 55, 52, 0.12) 30%,
+        rgba(20, 55, 52, 0.42) 58%,
+        rgba(15, 42, 40, 0.80) 100%
+      );
   }
 
-  .hero-container,
+
   .hero-content {
-    width: 100%;
-  }
+    height: 100%;
 
-  .hero-grid {
+    padding:
+      0 22px 22px;
+
     display: flex;
-    flex-direction: column;
+
+    align-items: flex-end;
   }
+
+
+  .hero-text {
+    width: 100%;
+  }
+
+
+  .eyebrow {
+    margin-bottom: 17px;
+
+    font-size: 9px;
+
+    letter-spacing: 2.3px;
+  }
+
+
+  .hero h1 {
+    font-size: 52px;
+
+    line-height: 0.96;
+
+    letter-spacing: -1.2px;
+  }
+
+
+  .hero p {
+    margin-top: 19px;
+
+    font-size: 14px;
+
+    line-height: 1.6;
+  }
+
+
+  .hero-buttons {
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 9px;
+
+    margin-top: 20px;
+  }
+
+
+  .hero .btn {
+    min-height: 48px;
+
+    font-size: 13px;
+  }
+
+
+  .hero .btn-primary {
+    min-width: 220px;
+  }
+
+
+  .hero .btn-outline {
+    min-width: 155px;
+  }
+
+
+  .hero-info {
+    width: 100%;
+
+    margin-top: 26px;
+
+    padding-top: 15px;
+
+    grid-template-columns:
+      repeat(3, minmax(0, 1fr));
+
+    gap: 6px;
+  }
+
+
+  .hero-info > div {
+    padding-right: 3px;
+
+    gap: 4px;
+  }
+
+
+  .hero-info strong {
+    font-size: 11px;
+  }
+
+
+  .hero-info span {
+    font-size: 9px;
+  }
+}
+
+
+/* =========================================================
+   LARGE PHONE
+   430px — 479px
+========================================================= */
+
+@media (min-width: 430px)
+and (max-width: 479px) {
+
+  .hero {
+    background-size: contain;
+
+    background-position:
+      center top;
+  }
+
 
   .hero-content {
-    width: 100%;
-    text-align: center;
-  }
+    padding-left: 21px;
 
-  .hero-image {
-    width: 100%;
-    margin-top: 30px;
-  }
-
-  .hero-image img {
-    width: 100%;
-    height: auto;
-    max-height: 450px;
-    object-fit: cover;
+    padding-right: 21px;
   }
 
 
-  /* ---------- ABOUT ---------- */
-
-  .about-grid {
-    grid-template-columns: 1fr;
-
-    gap: 35px;
-  }
-
-  .about-content {
-    width: 100%;
-  }
-
-  .about-image {
-    width: 100%;
-  }
-
-
-  /* ---------- TREATMENTS ---------- */
-
-  .treatments-grid {
-    grid-template-columns: 1fr;
-
-    gap: 18px;
-  }
-
-  .treatment-card {
-    width: 100%;
-  }
-
-
-  /* ---------- GALLERY ---------- */
-
-  .gallery-grid {
-    grid-template-columns: 1fr 1fr;
-
-    gap: 12px;
-  }
-
-  .gallery-grid img {
-    height: 220px;
-  }
-
-
-  /* ---------- REVIEWS ---------- */
-
-  .reviews-grid {
-    grid-template-columns: 1fr;
-
-    gap: 18px;
-  }
-
-
-  /* ---------- CONTACT ---------- */
-
-  .contact-grid {
-    grid-template-columns: 1fr;
-
-    gap: 30px;
-  }
-
-
-  /* ---------- PAGE HEADER ---------- */
-
-  .page-header {
-    width: 100%;
-
-    padding: 60px 18px 45px;
-  }
-
-  .page-header h1 {
-    font-size: 38px;
-  }
-
-
-  /* ---------- BUTTONS ---------- */
-
-  .appointment-btn {
-    max-width: 100%;
+  .hero h1 {
+    font-size: 50px;
   }
 }
 
 
 /* =========================================================
-   SMALL MOBILE
-   320px - 480px
+   STANDARD PHONE
+   390px — 429px
 ========================================================= */
 
-@media (max-width: 480px) {
+@media (min-width: 390px)
+and (max-width: 429px) {
 
-  .container {
-    padding-left: 15px;
-    padding-right: 15px;
-  }
+  .hero {
+    background-size: contain;
 
-  .section {
-    padding: 50px 15px;
-  }
-
-
-  /* ---------- LOGO ---------- */
-
-  .logo-main {
-    font-size: 19px;
-  }
-
-  .logo-sub {
-    font-size: 6px;
+    background-position:
+      center top;
   }
 
 
-  /* ---------- HERO ---------- */
+  .hero-content {
+    padding-left: 20px;
 
-  .hero h1,
-  .home h1 {
-    font-size: 32px;
+    padding-right: 20px;
+
+    padding-bottom: 19px;
+  }
+
+
+  .eyebrow {
+    margin-bottom: 15px;
+
+    font-size: 9px;
+
+    letter-spacing: 2.1px;
+  }
+
+
+  .hero h1 {
+    font-size: 47px;
+
+    line-height: 0.96;
+  }
+
+
+  .hero p {
+    margin-top: 17px;
+
+    font-size: 13.5px;
+
+    line-height: 1.55;
+  }
+
+
+  .hero-buttons {
+    margin-top: 18px;
+  }
+
+
+  .hero-info {
+    margin-top: 23px;
+
+    padding-top: 14px;
+  }
+}
+
+
+/* =========================================================
+   SMALL PHONE
+   360px — 389px
+========================================================= */
+
+@media (min-width: 360px)
+and (max-width: 389px) {
+
+  .hero {
+    background-size: contain;
+
+    background-position:
+      center top;
+  }
+
+
+  .hero-content {
+    padding-left: 18px;
+
+    padding-right: 18px;
+
+    padding-bottom: 17px;
+  }
+
+
+  .eyebrow {
+    margin-bottom: 15px;
+
+    font-size: 8.5px;
+
+    letter-spacing: 2px;
+  }
+
+
+  .hero h1 {
+    font-size: 43px;
+
+    line-height: 0.96;
+
+    letter-spacing: -0.8px;
+  }
+
+
+  .hero p {
+    margin-top: 16px;
+
+    font-size: 13px;
+
+    line-height: 1.55;
+  }
+
+
+  .hero-buttons {
+    margin-top: 17px;
+
+    gap: 8px;
+  }
+
+
+  .hero .btn {
+    min-height: 46px;
+
+    padding:
+      0 15px;
+
+    font-size: 12.5px;
+  }
+
+
+  .hero .btn-primary {
+    min-width: 205px;
+  }
+
+
+  .hero .btn-outline {
+    min-width: 150px;
+  }
+
+
+  .hero-info {
+    margin-top: 21px;
+
+    padding-top: 13px;
+
+    gap: 5px;
+  }
+
+
+  .hero-info > div {
+    padding-right: 2px;
+
+    gap: 3px;
+  }
+
+
+  .hero-info strong {
+    font-size: 10px;
+
     line-height: 1.2;
   }
 
-  .hero p,
-  .home p {
-    font-size: 14px;
-    line-height: 1.6;
-  }
 
-  .hero-image {
-    margin-top: 25px;
-  }
+  .hero-info span {
+    font-size: 8px;
 
-  .hero-image img {
-    max-height: 350px;
-  }
-
-
-  /* ---------- ABOUT ---------- */
-
-  .about-grid {
-    gap: 25px;
-  }
-
-  .about-grid h2 {
-    font-size: 30px;
-  }
-
-  .about-grid p {
-    font-size: 14px;
-    line-height: 1.7;
-  }
-
-
-  /* ---------- TREATMENTS ---------- */
-
-  .treatments-grid {
-    gap: 15px;
-  }
-
-  .treatment-card {
-    border-radius: 12px;
-  }
-
-
-  /* ---------- GALLERY ---------- */
-
-  .gallery-grid {
-    grid-template-columns: 1fr;
-
-    gap: 15px;
-  }
-
-  .gallery-grid img {
-    width: 100%;
-    height: 240px;
-  }
-
-
-  /* ---------- REVIEWS ---------- */
-
-  .review-card {
-    padding: 20px;
-  }
-
-
-  /* ---------- PAGE HEADER ---------- */
-
-  .page-header {
-    padding: 50px 15px 35px;
-  }
-
-  .page-header h1 {
-    font-size: 31px;
-    line-height: 1.2;
-  }
-
-  .page-header p {
-    font-size: 14px;
-    line-height: 1.6;
-  }
-
-
-  /* ---------- FORM ---------- */
-
-  input,
-  textarea,
-  select {
-    font-size: 14px;
-  }
-
-
-  /* ---------- FOOTER ---------- */
-
-  .footer-container {
-    padding: 40px 15px;
+    line-height: 1.3;
   }
 }
 
 
 /* =========================================================
-   VERY SMALL PHONES
-   320px and below
+   VERY SMALL PHONE
+   BELOW 360px
 ========================================================= */
 
-@media (max-width: 360px) {
+@media (max-width: 359px) {
 
-  .nav-container {
-    padding: 0 12px;
+  .hero {
+
+    background-size: contain;
+
+    background-position:
+      center top;
+
+    min-height:
+      calc(100svh - 64px);
+
+    height:
+      calc(100svh - 64px);
   }
 
-  .logo-main {
-    font-size: 17px;
+
+  .hero-content {
+    padding-left: 16px;
+
+    padding-right: 16px;
+
+    padding-bottom: 14px;
   }
 
-  .hero h1,
-  .home h1 {
-    font-size: 28px;
+
+  .eyebrow {
+    margin-bottom: 12px;
+
+    font-size: 8px;
+
+    letter-spacing: 1.7px;
   }
 
-  .page-header h1 {
-    font-size: 28px;
+
+  .hero h1 {
+    font-size: 39px;
+
+    line-height: 0.97;
+
+    letter-spacing: -0.7px;
   }
 
-  .section {
-    padding-left: 12px;
-    padding-right: 12px;
-  }
-}
 
+  .hero p {
+    margin-top: 14px;
 
-/* =========================================================
-   LARGE DESKTOP
-   1400px+
-========================================================= */
+    font-size: 12px;
 
-@media (min-width: 1400px) {
-
-  .nav-container,
-  .container,
-  .hero-container,
-  .hero-content,
-  .about-grid,
-  .treatments-grid,
-  .gallery-grid,
-  .reviews-grid,
-  .contact-grid {
-    max-width: 1280px;
+    line-height: 1.5;
   }
 
-  .section {
-    padding-top: 100px;
-    padding-bottom: 100px;
+
+  .hero-buttons {
+    margin-top: 15px;
+
+    gap: 7px;
+  }
+
+
+  .hero .btn {
+    min-height: 44px;
+
+    padding:
+      0 13px;
+
+    font-size: 12px;
+
+    gap: 7px;
+  }
+
+
+  .hero .btn-primary {
+    min-width: 195px;
+  }
+
+
+  .hero .btn-outline {
+    min-width: 145px;
+  }
+
+
+  .hero-info {
+    margin-top: 18px;
+
+    padding-top: 11px;
+
+    gap: 4px;
+  }
+
+
+  .hero-info strong {
+    font-size: 9px;
+  }
+
+
+  .hero-info span {
+    font-size: 7px;
   }
 }

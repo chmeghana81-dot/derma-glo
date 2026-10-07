@@ -167,6 +167,20 @@ img {
     url("/images/hero.jpg") center / cover;
 }
 
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background: linear-gradient(
+    90deg,
+    rgba(8, 43, 38, 0.94) 0%,
+    rgba(8, 43, 38, 0.82) 38%,
+    rgba(8, 43, 38, 0.34) 62%,
+    rgba(8, 43, 38, 0) 100%
+  );
+}
+
 .hero-content {
   position: relative;
   z-index: 2;
@@ -806,8 +820,23 @@ img {
   }
 
   .hero {
-    min-height: 680px;
+    height: min(100svh, 177.78vw);
+    min-height: min(580px, 100svh);
     padding-top: 70px;
+    background-color: #254c46;
+    background-repeat: no-repeat;
+    background-size: auto 88%;
+    background-position: 70% center;
+  }
+
+  .hero-overlay {
+    background: linear-gradient(
+      90deg,
+      rgba(8, 43, 38, 0.96) 0%,
+      rgba(8, 43, 38, 0.88) 38%,
+      rgba(8, 43, 38, 0.42) 62%,
+      rgba(8, 43, 38, 0) 100%
+    );
   }
 
   .hero h1 {
@@ -1008,4 +1037,156 @@ section {
 .footer {
   background: #173f3c;
   color: #ffffff;
+}
+/* =========================================================
+   DERMA GLO - RESPONSIVE SYSTEM
+   Mobile → Tablet → Laptop → Desktop
+   ========================================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-width: 320px;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+button,
+input,
+textarea,
+select {
+  max-width: 100%;
+}
+
+.container,
+.section-container {
+  width: min(1200px, calc(100% - 40px));
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Prevent long text from breaking layouts */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  overflow-wrap: break-word;
+}
+
+/* =========================================================
+   LARGE DESKTOP
+   1440px+
+   ========================================================= */
+
+@media (min-width: 1440px) {
+  .container,
+  .section-container {
+    width: min(1280px, calc(100% - 80px));
+  }
+}
+
+/* =========================================================
+   LAPTOP
+   1024px - 1439px
+   ========================================================= */
+
+@media (max-width: 1439px) {
+  .container,
+  .section-container {
+    width: min(1180px, calc(100% - 50px));
+  }
+}
+
+/* =========================================================
+   TABLET
+   768px - 1023px
+   ========================================================= */
+
+@media (max-width: 1023px) {
+  .container,
+  .section-container {
+    width: calc(100% - 40px);
+  }
+
+  section {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+/* =========================================================
+   MOBILE
+   480px - 767px
+   ========================================================= */
+
+@media (max-width: 767px) {
+  .container,
+  .section-container {
+    width: calc(100% - 32px);
+  }
+
+  section {
+    width: 100%;
+  }
+
+  h1 {
+    font-size: clamp(2rem, 8vw, 2.7rem);
+    line-height: 1.15;
+  }
+
+  h2 {
+    font-size: clamp(1.7rem, 7vw, 2.2rem);
+    line-height: 1.2;
+  }
+
+  h3 {
+    font-size: 1.25rem;
+  }
+
+  p {
+    font-size: 0.95rem;
+    line-height: 1.7;
+  }
+}
+
+/* =========================================================
+   SMALL MOBILE
+   320px - 479px
+   ========================================================= */
+
+@media (max-width: 479px) {
+  .container,
+  .section-container {
+    width: calc(100% - 24px);
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.65rem;
+  }
+
+  p {
+    font-size: 0.9rem;
+  }
 }
